@@ -1,18 +1,19 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
+  pageTitle: Campaign Wiki
   pageTitleSuffix: ""
   enableSPA: true
   enablePopovers: true
   prefetch: viewport
-  analytics:
-    provider: plausible
+  analytics: null
   locale: en-US
-  baseUrl: quartz.jzhao.xyz
+  baseUrl: your-campaign.example.com
   ignorePatterns:
     - private
+    - gm-only
     - templates
     - .obsidian
+  publishAssets: referenced
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
@@ -191,9 +192,7 @@ plugins:
   - source: "@quartz-community/footer"
     enabled: true
     options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+      links: {}
     layout:
       position: footer
       priority: 50
@@ -231,7 +230,7 @@ plugins:
     options: {}
     order: 45
   - source: "@quartz-community/encrypted-pages"
-    enabled: true
+    enabled: false
     options:
       iterations: 600000
       passwordField: password
